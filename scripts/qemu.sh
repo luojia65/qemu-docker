@@ -24,6 +24,7 @@ apt install -y --no-install-recommends \
 : "${QEMU_TARGET:=riscv64-softmmu}"
 
 # Enable venv
+pip install virtualenv
 virtualenv .env
 source .env/bin/activate
 
