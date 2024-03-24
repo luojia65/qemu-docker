@@ -16,7 +16,9 @@ apt install -y --no-install-recommends \
     libfdt-dev \
     libpixman-1-dev \
     zlib1g-dev \
-    ninja-build
+    ninja-build \
+    python3 \
+    python3-venv
 # end of list
 
 # qemu version
@@ -24,8 +26,7 @@ apt install -y --no-install-recommends \
 : "${QEMU_TARGET:=riscv64-softmmu}"
 
 # Enable venv
-pip3 install virtualenv
-virtualenv .env
+python3 -m venv .env
 source .env/bin/activate
 
 # Get qemu
