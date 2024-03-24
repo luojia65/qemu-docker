@@ -23,6 +23,9 @@ apt install -y --no-install-recommends \
 : "${QEMU_VER:=7.1.0}"
 : "${QEMU_TARGET:=riscv64-softmmu}"
 
+# Enable venv
+source venv/bin/activate
+
 # Get qemu
 wget https://download.qemu.org/qemu-$QEMU_VER.tar.xz -O "$TEMP_DIR/qemu-$QEMU_VER.tar.xz"
 tar -xJf "$TEMP_DIR/qemu-$QEMU_VER.tar.xz"
